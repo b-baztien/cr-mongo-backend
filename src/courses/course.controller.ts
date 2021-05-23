@@ -40,6 +40,7 @@ export class CourseController {
     @Body() createReviewDto: CreateReviewDto,
   ) {
     createReviewDto.courseId = courseId;
+
     return this.courseService.createReview(createReviewDto);
   }
 }
